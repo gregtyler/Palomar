@@ -1,13 +1,15 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<article class="c-article">
+<article>
   <header class="c-article__header">
-    <h2>{{title}}</h2>
+    <h2 class="c-article__header-title">{{title}}</h2>
     <p class="c-article__byline">Posted by <time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{author.name}}</time> at {{published | date}}</p>
   </header>
 
-  {{body}}
+  <div class="c-article o-text-container">
+    {{body | safe}}
+  </div>
 </article>
 {% endblock %}
 

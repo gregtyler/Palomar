@@ -18,6 +18,7 @@
     "postcss-nested": "^1.0.0"
   },
   "dependencies": {
+    "node-markdown": "^0.1.1",
     "nunjucks": "^2.5.2",
     "nunjucks-date-filter": "^0.1.1"
   }

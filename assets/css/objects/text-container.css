@@ -1,0 +1,7 @@
+.o-text-container {
+  line-height: 1.6;
+  letter-spacing: -0.02rem;
+}
+
+.o-text-container > p:first-child { margin-top: 0; }
+.o-text-container > p:last-child { margin-bottom: 0; }
