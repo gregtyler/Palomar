@@ -32,6 +32,8 @@ function handleRequest(request, response) {
       if (err) throw err;
       response.end(contents);
     });
+  } else if (request.url === '/') {
+    response.end(Templater.render('home.nunjucks'));
   } else {
     // Find the requested post
     const postId = request.url.substr(1);

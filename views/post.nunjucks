@@ -10,3 +10,7 @@
   {{body}}
 </article>
 {% endblock %}
+
+{% block title %}
+  {{title}}
+{% endblock %}

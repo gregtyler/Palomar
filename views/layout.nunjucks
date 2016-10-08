@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>{% block title %}{{config.siteTitle}}{% endblock %}</title>
   <link rel="stylesheet" type="text/css" href="/main.css">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 </head>
