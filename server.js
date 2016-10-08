@@ -1,23 +1,10 @@
 // Load the HTTP module
 const http = require('http');
 const fs = require('fs');
-const nunjucks = require('nunjucks');
-const dateFilter = require('nunjucks-date-filter');
+const Templater = require('./lib/Templater');
 
 // Define server port (proxied to URL through Apache)
 const PORT = 4141;
-
-const nunjucksEnv = nunjucks.configure('views', { autoescape: true });
-fs.readFile('config/config.json', 'utf8', function(err, contents) {
-  if (err) throw err;
-
-  const config = JSON.parse(contents);
-  nunjucksEnv.addGlobal('config', config);
-
-  // Add date filter to nunjucks
-  dateFilter.setDefaultFormat(config.dateFormat);
-  nunjucksEnv.addFilter('date', dateFilter);
-});
 
 /**
  * Handle a request to the server
@@ -43,7 +30,7 @@ function handleRequest(request, response) {
       },
       published: new Date('2016-10-08T06:39:13Z')
     };
-    response.write(nunjucks.render('post.nunjucks', post));
+    response.write(Templater.render('post.nunjucks', post));
     response.end();
   }
 }
