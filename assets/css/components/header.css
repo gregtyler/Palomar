@@ -1,0 +1,11 @@
+.c-header {
+  background-color: var(--colour-background-brand);
+  color: var(--colour-text-brand);
+  text-align: center;
+}
+
+.c-header__title {
+  margin: 0;
+  padding: 1rem;
+  font-family: var(--font-headers);
+}

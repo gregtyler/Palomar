@@ -1,10 +1,10 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<article>
-  <header>
-    <h2>This is a post called {{title}}</h2>
-    <p>Posted by <time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{author.name}}</time> at {{published | date}}</p>
+<article class="c-article">
+  <header class="c-article__header">
+    <h2>{{title}}</h2>
+    <p class="c-article__byline">Posted by <time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{author.name}}</time> at {{published | date}}</p>
   </header>
 
   {{body}}

@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 </head>
 <body>
-  <header>
-    <h1>{{config.siteTitle}}</h1>
+  <header class="c-header">
+    <h1 class="c-header__title">{{config.siteTitle}}</h1>
+    <nav>
+      <menu class="c-navigation">
+        <li class="c-navigation__item"><a href="/" class="c-navigation__link">Home</a></li>
+        <li class="c-navigation__item"><a href="https://twitter.com/gregtyler" class="c-navigation__link">Twitter</a></li>
+      </menu>
+    </nav>
   </header>
-  <nav>
-    <menu>
-      <li><a href="/">Home</a></li>
-      <li><a href="https://twitter.com/gregtyler">Twitter</a></li>
-    </menu>
-  </nav>
   <main>
     {% block content %}{% endblock %}
   </main>

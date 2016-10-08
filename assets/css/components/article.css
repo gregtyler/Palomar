@@ -1,0 +1,17 @@
+.c-article {
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: var(--colour-background-article);
+}
+
+.c-article__header {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.c-article__byline {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #CCC;
+  font-size: 0.85rem;
+}

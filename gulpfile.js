@@ -4,12 +4,14 @@ const cssnano = require('cssnano');
 const nested = require('postcss-nested');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
+const atImport = require('postcss-import');
 
 // Build the CSS
 gulp.task('buildCSS', function() {
   const processors = [
-    cssnano(),
-    nested()
+    nested(),
+    atImport(),
+    cssnano()
   ];
 
   return gulp.src('assets/css/main.css')
@@ -32,7 +34,7 @@ gulp.task('buildCSS', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch('assets/css/*.css', ['buildCSS']);
+  gulp.watch('assets/css/**/*.css', ['buildCSS']);
 });
 
 // The default task (called when you run `gulp` from cli)

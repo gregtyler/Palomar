@@ -1,0 +1,10 @@
+:root {
+  --colour-background: #DDD;
+  --colour-text: #333;
+  --colour-background-article: #FFF;
+  --colour-background-brand: #C82E14;
+  --colour-text-brand: #FFF;
+
+  --font-headers: "Titillium Web", arial, sans-serif;
+  --font-body: Merriweather, serif;
+}
