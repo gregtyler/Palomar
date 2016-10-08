@@ -1,0 +1,8 @@
+.o-flex__container {
+  display: flex;
+  align-items: center;
+}
+
+.o-flex__item {
+  flex: 1;
+}

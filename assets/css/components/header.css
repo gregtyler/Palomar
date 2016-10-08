@@ -1,11 +1,23 @@
 .c-header {
   background-color: var(--colour-background-brand);
   color: var(--colour-text-brand);
-  text-align: center;
 }
 
 .c-header__title {
   margin: 0;
   padding: 1rem;
   font-family: var(--font-headers);
+}
+
+.c-header__link {
+  margin-right: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  box-shadow: inset 0 -1px hsla(0, 0%, 100%, 0.2);
+  transition: background-color 0.2s;
+}
+
+.c-header__link:hover {
+  background-color: hsla(0, 0%, 100%, 0.5);
 }
