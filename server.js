@@ -11,12 +11,13 @@ const PORT = 4141;
  * Handle an error
  * @param Error The error that was thrown
  */
-function handleError(response, err) {
+/*function handleError(response, err) {
   response.statusCode = 404;
   const errorId = 'E-' + Date.now();
   fs.appendFile('error.log', `${errorId}: ${err.message}\n`);
   response.end(Templater.render('error.nunjucks', {errorId}));
-}
+}*/
+// .catch(handleError.bind(process, response))
 
 /**
  * Handle a request to the server
@@ -29,14 +30,22 @@ function handleRequest(request, response) {
     response.setHeader('Content-type', 'text/css');
     fs.readFile('public' + request.url, function(err, contents) {
       if (err) throw err;
-      response.write(contents);
-      response.end();
+      response.end(contents);
     });
   } else {
-    Post.find('test-article').then(function(post) {
-      response.write(Templater.render('post.nunjucks', post));
-      response.end();
-    }).catch(handleError.bind(process, response));
+    // Find the requested post
+    const postId = request.url.substr(1);
+    Post.find(postId).then(function(post) {
+      // Show the post
+      response.end(Templater.render('post.nunjucks', post));
+    }).catch(function() {
+      // If the post wasn't found, show an error message
+      response.statusCode = '404';
+      response.end(Templater.render('error.nunjucks', {
+        title: 'Post not found',
+        message: 'The requested post could not be found. It may have been moved, or deleted or renamed.'
+      }));
+    });
   }
 }
 
