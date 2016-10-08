@@ -2,9 +2,21 @@
 const http = require('http');
 const fs = require('fs');
 const Templater = require('./lib/Templater');
+const Post = require('./models/Post');
 
 // Define server port (proxied to URL through Apache)
 const PORT = 4141;
+
+/**
+ * Handle an error
+ * @param Error The error that was thrown
+ */
+function handleError(response, err) {
+  response.statusCode = 404;
+  const errorId = 'E-' + Date.now();
+  fs.appendFile('error.log', `${errorId}: ${err.message}\n`);
+  response.end(Templater.render('error.nunjucks', {errorId}));
+}
 
 /**
  * Handle a request to the server
@@ -21,17 +33,10 @@ function handleRequest(request, response) {
       response.end();
     });
   } else {
-    const post = {
-      title: 'James',
-      body: 'Article contents',
-      author: {
-        name: 'Greg Tyler',
-        email: 'greg@gregtyler.co.uk'
-      },
-      published: new Date('2016-10-08T06:39:13Z')
-    };
-    response.write(Templater.render('post.nunjucks', post));
-    response.end();
+    Post.find('test-article').then(function(post) {
+      response.write(Templater.render('post.nunjucks', post));
+      response.end();
+    }).catch(handleError.bind(process, response));
   }
 }
 
