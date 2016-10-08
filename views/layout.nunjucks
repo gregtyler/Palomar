@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1>{{config.siteTitle}}</h1>
+  </header>
+  <nav>
+    <menu>
+      <li><a href="/">Home</a></li>
+      <li><a href="https://twitter.com/gregtyler">Twitter</a></li>
+    </menu>
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

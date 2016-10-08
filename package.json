@@ -1,0 +1,23 @@
+{
+  "name": "Almacen",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "nodemon": "nodemon -e js,json,css,nunjucks"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^3.7.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-nested": "^1.0.0"
+  },
+  "dependencies": {
+    "nunjucks": "^2.5.2",
+    "nunjucks-date-filter": "^0.1.1"
+  }
+}
