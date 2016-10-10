@@ -32,8 +32,8 @@ function handleRequest(request, response) {
       if (err) throw err;
       response.end(contents);
     });
-  } else if (request.url.match(/\/assets\/blog-images\/([a-z0-9-_ ]+\.([a-z0-9]+))/)) {
-    const a = request.url.match(/\/assets\/blog-images\/([a-z0-9-_ ]+\.[a-z0-9]+)/);
+  } else if (request.url.match(/\/assets\/user-images\/([a-z0-9-_ ]+\.([a-z0-9]+))/)) {
+    const a = request.url.match(/\/assets\/user-images\/([a-z0-9-_ ]+\.[a-z0-9]+)/);
     response.statusCode = 200;
     response.setHeader('Content-type', 'image/jpeg');
     fs.readFile('data/images/' + a[1], function(err, contents) {
