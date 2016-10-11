@@ -5,7 +5,10 @@
 
 @import "objects/flex";
 @import "objects/link-inherit";
+@import "objects/media";
 @import "objects/text-container";
 
 @import "components/article";
 @import "components/header";
+
+@import "utilities/clearfix";

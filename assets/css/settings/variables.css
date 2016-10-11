@@ -1,4 +1,7 @@
 :root {
+  --spacing-h: 1rem;
+  --spacing-v: 1rem;
+
   --colour-background: #DDD;
   --colour-text: #333;
   --colour-background-article: #FFF;

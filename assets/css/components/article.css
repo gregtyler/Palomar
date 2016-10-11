@@ -1,6 +1,6 @@
 .c-article {
-  margin: 0 1rem;
-  padding: 1.5rem;
+  margin: 0 var(--spacing-h);
+  padding: var(--spacing-v) var(--spacing-h);
   background-color: var(--colour-background-article);
 }
 

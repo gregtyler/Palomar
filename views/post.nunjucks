@@ -7,7 +7,7 @@
     <p class="c-article__byline">Posted by <time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{author.name}}</time> at {{published | date}}</p>
   </header>
 
-  <div class="c-article o-text-container">
+  <div class="c-article o-overflow o-text-container u-clearfix">
     {{body | safe}}
   </div>
 </article>
