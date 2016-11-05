@@ -1,11 +1,13 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<article>
-  <header>
-    <h2>{% if title %}{{ title }}{% else %}An error occurred{% endif %}</h2>
+<article class="c-post">
+  <header class="c-post__header">
+    <h2 class="c-post__header-title">{% if title %}{{ title }}{% else %}An error occurred{% endif %}</h2>
   </header>
 
-  <div class="alert alert--error">An unexpected error occurred. This has been logged. To report this error, quote the reference "{{errorId}}".</div>
+  <div class="c-post__body alert alert--error">
+    An unexpected error occurred. This has been logged. To report this error, quote the reference "{{errorId}}".
+  </div>
 </article>
 {% endblock %}

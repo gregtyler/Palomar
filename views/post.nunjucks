@@ -1,16 +1,16 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<article>
-  <header class="c-article__header">
-    <h2 class="c-article__header-title">{{title}}</h2>
-    <p class="c-article__byline">
+<article class="c-post">
+  <header class="c-post__header c-post__header--article">
+    <h2 class="c-post__header-title">{{title}}</h2>
+    <p class="c-post__byline">
       Posted&nbsp;by&nbsp;<strong>{{author.name}}</strong>
       <wbr>
       at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong></p>
   </header>
 
-  <div class="c-article o-overflow o-text-container u-clearfix">
+  <div class="c-post__body c-post__body--article o-overflow o-text-container u-clearfix">
     {{body | safe}}
   </div>
 </article>

@@ -1,12 +1,12 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<article>
-  <header>
-    <h2>Page not found</h2>
+<article class="c-post">
+  <header class="c-post__header">
+    <h2 class="c-post__header-title">Page not found</h2>
   </header>
 
-  <div class="alert alert--error">
+  <div class="c-post__body alert alert--error">
     The requested page could not be found. It may have been moved, renamed or deleted.
   </div>
 </article>

@@ -8,7 +8,7 @@
 @import "objects/media";
 @import "objects/text-container";
 
-@import "components/article";
+@import "components/post";
 @import "components/header";
 
 @import "utilities/clearfix";
