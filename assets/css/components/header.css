@@ -21,3 +21,9 @@
 .c-header__link:hover {
   background-color: hsla(0, 0%, 100%, 0.5);
 }
+
+@media (max-width: 400px) {
+  .c-header__link {
+    display: none;
+  }
+}

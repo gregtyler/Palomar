@@ -1,21 +1,23 @@
 .c-article {
-  margin: 0 var(--spacing-h);
+  max-width: 800px;
+  margin: 0 auto;
   padding: var(--spacing-v) var(--spacing-h);
-  background-color: var(--colour-background-article);
 }
 
 .c-article__header {
-  font-size: 1.8rem;
+  border-bottom: 1px solid #EEE;
   text-align: center;
 }
 
 .c-article__header-title {
-  margin: 1.5rem;
+  margin: calc(1.5 * var(--spacing-v))  calc(1.5 * var(--spacing-h));
+  font-family: var(--font-headers);
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .c-article__byline {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #CCC;
+  margin-top: var(--spacing-v);
   font-size: 0.9rem;
 }

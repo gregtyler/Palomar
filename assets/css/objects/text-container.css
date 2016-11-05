@@ -1,6 +1,7 @@
 .o-text-container {
-  line-height: 1.6;
+  line-height: 1.4;
   letter-spacing: -0.02rem;
+  text-align: justify;
 }
 
 .o-text-container > p:first-child { margin-top: 0; }
