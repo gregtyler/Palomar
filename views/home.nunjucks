@@ -3,6 +3,7 @@
 {% block content %}
 Home page
 {% for post in posts %}
-  {{post}}
+  <h2>{{post.title}}</h2>
+  <p>By {{post.author.name}} on {{post.published | date}}</p>
 {% endfor %}
 {% endblock %}
