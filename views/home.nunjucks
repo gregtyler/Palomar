@@ -2,4 +2,7 @@
 
 {% block content %}
 Home page
+{% for post in posts %}
+  {{post}}
+{% endfor %}
 {% endblock %}
