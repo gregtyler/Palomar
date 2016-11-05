@@ -1,39 +1,39 @@
 const fs = require('fs');
 const parsePostFile = require('../lib/parsePostFile');
+const walk = require('../lib/walk');
 
-module.exports.all = function find(criteria) {
-  let matchFound = false;
+module.exports.all = function all(criteria) {
+  const searchDir = typeof criteria.series === 'string' ? `data/${criteria.series}` : 'data';
+  const proms = [];
 
-  return new Promise(function(resolve, reject) {
-    // Look through the data directory
-    fs.readdir(`data/${series}`, function(err, files) {
-      if (err) reject(err);
-      for (const filename of files) {
-        // Check if the filename matches what we're searching for
-        if (filename.substr(9, filename.length - 12) === id) {
-          matchFound = true;
-          // Get the contents of the file
-          fs.readFile(`data/${series}/${filename}`, 'utf-8', function(err, contents) {
-            if (err) {
-              reject(err);
-            } else {
-              // Get the post details out of the file
-              const post = parsePostFile(contents);
-              resolve(post);
-            }
-          });
-        }
+  return walk(searchDir).then(function(files) {
+    for (const filepath of files) {
+      // Skip non-markdown files
+      if (filepath.substr(-3) !== '.md') {
+        continue;
       }
 
-      // Throw an error if no post was found
-      if (!matchFound) {
-        reject(new Error('Post not found'));
+      // If we're looking for a particular slug, check the filename matches it
+      if (typeof criteria.id === 'string' && filepath.substr(9, filepath.length - 12) !== criteria.id) {
+        continue;
       }
-    });
+
+      // Get the contents of the file
+      proms.push(new Promise(function(resolve, reject) {
+        fs.readFile(`${filepath}`, 'utf-8', function(err, contents) {
+          if (err) reject(err);
+
+          // Get the post details out of the file
+          resolve(parsePostFile(contents));
+        });
+      }));
+    }
+
+    return Promise.all(proms);
   });
 };
 
-module.exports.find = function(criteria) {
+module.exports.find = function find(criteria) {
   const all = this.all(criteria);
   return (all.length === '' ? null : all[0]);
 };
