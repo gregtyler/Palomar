@@ -9,10 +9,10 @@
 <body>
   <header class="c-header o-flex__container">
     <h1 class="c-header__title o-flex__item">
-      <a href="/" class="o-link-inherit">{{config.siteTitle}}</a>
+      <a href="/" class="c-header__link o-link-inherit">{{config.siteTitle}}</a>
     </h1>
-    <a href="https://twitter.com/gregtyler" class="c-header__link o-link-inherit" target="_blank">Twitter</a>
-    <a href="https://github.com/gregtyler" class="c-header__link o-link-inherit" target="_blank">GitHub</a>
+    <a href="https://twitter.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">Twitter</a>
+    <a href="https://github.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">GitHub</a>
   </header>
   <main>
     {% block content %}{% endblock %}

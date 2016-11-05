@@ -10,14 +10,17 @@
 }
 
 .c-header__link {
-  margin-right: var(--spacing-h);
-  padding: calc(var(--spacing-v) * 0.5) calc(var(--spacing-h) * 0.5);
   border-radius: 3px;
   transition: box-shadow 0.2s;
 }
 
 .c-header__link:hover {
-  box-shadow: 0 2px hsla(0, 0%, 100%, 0.6);
+  box-shadow: 0 2px hsla(0, 0%, 100%, 0.6), 0 -2px hsla(0, 0%, 100%, 0.6);
+}
+
+.c-header__link--external {
+  margin-right: var(--spacing-h);
+  padding: calc(var(--spacing-v) * 0.5) calc(var(--spacing-h) * 0.5);
 }
 
 @media (max-width: 400px) {
