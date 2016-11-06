@@ -6,6 +6,12 @@
   --colour-text: #555;
   --colour-background-brand: #C82E14;
   --colour-text-brand: #FFF;
+  --colour-background-tile: #EEE;
+
+  /* Subbrands */
+  --colour-subbrand-default: #DDD;
+  --colour-subbrand-webdev: #fbbf13;
+  --colour-subbrand-uoe: #041e42;
 
   --font-headers: "Titillium Web", arial, sans-serif;
   --font-body: "Open Sans", Merriweather, serif;

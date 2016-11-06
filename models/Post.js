@@ -1,4 +1,3 @@
-const fs = require('fs');
 const parsePostFile = require('../lib/parsePostFile');
 const walk = require('../lib/walk');
 
@@ -19,14 +18,7 @@ module.exports.all = function all(criteria) {
       }
 
       // Get the contents of the file
-      proms.push(new Promise(function(resolve, reject) {
-        fs.readFile(`${filepath}`, 'utf-8', function(err, contents) {
-          if (err) reject(err);
-
-          // Get the post details out of the file
-          resolve(parsePostFile(contents));
-        });
-      }));
+      proms.push(parsePostFile(filepath));
     }
 
     return Promise.all(proms).then(function(posts) {

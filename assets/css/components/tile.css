@@ -1,0 +1,26 @@
+.c-tile {
+  min-width: 250px;
+  margin: var(--spacing-v) var(--spacing-h);
+  padding: var(--spacing-v) var(--spacing-h);
+  border-top: 5px solid var(--colour-subbrand-default);
+  background-color: var(--colour-background-tile);
+}
+
+.c-tile--webdev { border-top-color: var(--colour-subbrand-webdev); }
+.c-tile--uoe { border-top-color: var(--colour-subbrand-uoe); }
+
+.c-tile__title {
+  margin-top: 0;
+  margin-bottom: calc(0.5 * var(--spacing-v));
+}
+
+.c-tile__byline {
+  margin-top: calc(0.5 * var(--spacing-v));
+  margin-bottom: calc(0.5 * var(--spacing-v));
+  font-size: 0.85rem;
+}
+
+.c-tile__standfirst {
+  margin-top: calc(0.5 * var(--spacing-v));
+  margin-bottom: 0;
+}

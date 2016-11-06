@@ -3,6 +3,18 @@
   align-items: center;
 }
 
+.o-flex__container--stretch {
+  align-items: stretch;
+}
+
+.o-flex__container--align-top {
+  align-items: flex-start;
+}
+
+.o-flex__container--wrap {
+  flex-wrap: wrap;
+}
+
 .o-flex__item {
   flex: 1;
 }

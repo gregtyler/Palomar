@@ -1,10 +1,29 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-Home page
-{% for post in posts %}
-  <h2>{{post.title}}</h2>
-  <p>By {{post.author.name}} on {{post.published | date}}</p>
-  <p>{{post.excerpt}}</p>
-{% endfor %}
+<div class="o-flex__container o-flex__container--align-top">
+  <div class="o-flex__item o-flex__container o-flex__container--stretch o-flex__container--wrap">
+    {% for post in posts %}
+      <div class="c-tile c-tile--{{post.series}} o-flex__item">
+        <header class="c-tile__header">
+          <h2 class="c-tile__title">{{post.title}}</h2>
+        </header>
+        <div class="c-tile__byline">
+          {% if post.author.email === 'greg@gregtyler.co.uk' or post.author === null %}
+            On {{post.published | date}}
+          {% else %}
+            By {{post.author.name}} on {{post.published | date}}
+          {% endif %}
+        </div>
+        <p class="c-tile__standfirst">{{post.excerpt}}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="c-tile" style="width:30%;">
+    <header class="c-tile__header">
+      <h3 class="c-tile__title">Series</h3>
+    </header>
+  </div>
+</div>
 {% endblock %}
