@@ -6,7 +6,7 @@
     <h2 class="c-post__header-title">{% if title %}{{ title }}{% else %}An error occurred{% endif %}</h2>
   </header>
 
-  <div class="c-post__body alert alert--error">
+  <div class="c-post__body">
     An unexpected error occurred. This has been logged. To report this error, quote the reference "{{errorId}}".
   </div>
 </article>

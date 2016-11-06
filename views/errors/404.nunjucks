@@ -6,7 +6,7 @@
     <h2 class="c-post__header-title">Page not found</h2>
   </header>
 
-  <div class="c-post__body alert alert--error">
+  <div class="c-post__body">
     The requested page could not be found. It may have been moved, renamed or deleted.
   </div>
 </article>
