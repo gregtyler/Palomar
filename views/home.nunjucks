@@ -24,6 +24,11 @@
     <header class="c-tile__header">
       <h3 class="c-tile__title">Series</h3>
     </header>
+    <ul>
+      {% for oneSeries in series %}
+        <li><a href="{{oneSeries.url}}">{{oneSeries.label}}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 {% endblock %}
