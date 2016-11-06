@@ -3,8 +3,11 @@ const path = require('path');
 
 const indexFilename = '_index.json';
 
-module.exports.all = function all() {
+module.exports.all = function all(criteria) {
   const all = [];
+
+  if (typeof criteria !== 'object') criteria = {};
+
   return new Promise(function(resolve, reject) {
     fs.readdir('data', function(err, files) {
       if (err) reject(err);
@@ -28,6 +31,20 @@ module.exports.all = function all() {
         });
       }
     });
+  }).then(function(series) {
+    // Sort series if requested
+    if (typeof criteria.order !== 'string') {
+      criteria.order = 'label';
+    }
+
+    const orderRev = criteria.order.substr(-1) === '^' ? true : false;
+    const orderParam = criteria.order.replace(/\^+$/, '');
+    series.sort(function(a, b) {
+      return (orderRev ? -1 : 1) * (a[orderParam] > b[orderParam] ? 1 : -1);
+    });
+
+    // Return posts
+    return series;
   });
 };
 
