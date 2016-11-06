@@ -18,6 +18,5 @@
   <main>
     {% block content %}{% endblock %}
   </main>
-  {% iconOutput 'test' %}
 </body>
 </html>
