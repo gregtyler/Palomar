@@ -3,7 +3,7 @@
 }
 
 .c-post__header--article {
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid var(--colour-border);
   text-align: center;
 }
 

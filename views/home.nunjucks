@@ -7,7 +7,14 @@
       <div class="c-tile c-tile--{{post.series}} o-flex__item">
         <header class="c-tile__header">
           <h2 class="c-tile__title">
-            <a class="c-tile__link" href="{% if post.link %}{{post.link}}{% else %}{{post.url}}{% endif %}" {% if post.link %}target="_blank"{% endif %}>{{post.title}}</a>
+            {% if post.link %}
+            <a class="o-link-inherit" href="{{post.link}}" target="_blank">
+              {{post.title}}
+              []
+            </a>
+            {% else %}
+            <a class="o-link-inherit" href="{{post.url}}">{{post.title}}</a>
+            {% endif %}
           </h2>
         </header>
         <div class="c-tile__byline">
@@ -18,7 +25,7 @@
           {% endif %}
         </div>
         <p class="c-tile__standfirst">{{post.excerpt}}</p>
-        <a href="{{post.url}}" class="c-tile__link">Read full article &raquo;</a>
+        <a href="{{post.url}}">Read full article &raquo;</a>
       </div>
     {% endfor %}
   </div>

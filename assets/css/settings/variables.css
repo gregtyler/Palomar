@@ -2,11 +2,18 @@
   --spacing-h: 1rem;
   --spacing-v: 1rem;
 
+  /* Main colours */
   --colour-background: #FFF;
   --colour-text: #555;
   --colour-background-brand: #C82E14;
+  --colour-background-brand--darken: #84200F;
   --colour-text-brand: #FFF;
   --colour-background-tile: #EEE;
+  --colour-border: var(--colour-background-tile);
+
+  /* Links */
+  --color-link: #3973B1;
+  --color-link-hover: #1F4369;
 
   /* Subbrands */
   --colour-subbrand-default: #DDD;

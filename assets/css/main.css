@@ -1,4 +1,6 @@
+@import "elements/a";
 @import "elements/body";
+@import "elements/hr";
 
 @import "settings/fonts";
 @import "settings/variables";
@@ -8,8 +10,10 @@
 @import "objects/media";
 @import "objects/text-container";
 
+@import "components/button";
 @import "components/header";
 @import "components/tile";
 @import "components/post";
 
 @import "utilities/clearfix";
+@import "utilities/text-align";

@@ -1,0 +1,8 @@
+a {
+  color: var(--color-link);
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}

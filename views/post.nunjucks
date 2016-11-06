@@ -13,6 +13,12 @@
   <div class="c-post__body c-post__body--article o-overflow o-text-container u-clearfix">
     {{body | safe}}
   </div>
+
+  {% if link %}
+  <div class="u-text-centre">
+    <a href="{{link}}" class="c-btn c-btn--primary" target="_blank">Read full article</a>
+  </div>
+  {% endif %}
 </article>
 {% endblock %}
 

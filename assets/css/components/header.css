@@ -16,6 +16,7 @@
 
 .c-header__link:hover {
   box-shadow: 0 2px hsla(0, 0%, 100%, 0.6), 0 -2px hsla(0, 0%, 100%, 0.6);
+  color: var(--colour-text-brand);
 }
 
 .c-header__link--external {

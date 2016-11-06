@@ -1,0 +1,32 @@
+.c-btn {
+  display: inline-block;
+  padding: calc(0.5 * var(--spacing-h)) var(--spacing-v);
+  border: 1px solid var(--btn-colour-shadow);
+  border-radius: 3px;
+  background-color: var(--btn-colour-background);
+  color: var(--btn-colour-text);
+  text-decoration: none;
+  box-shadow: 0 1px var(--btn-colour-shadow), inset 0 1px hsla(0, 0%, 100%, 0.2);
+}
+
+.c-btn:hover {
+  background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 0.1));
+  color: var(--btn-colour-text);
+}
+
+.c-btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.c-btn--default {
+  --btn-colour-background: var(--colour-background);
+  --btn-colour-text: var(--colour-text);
+  --btn-colour-shadow: hsla(0, 0%, 0%, 0.3)
+}
+
+.c-btn--primary {
+  --btn-colour-background: var(--colour-background-brand);
+  --btn-colour-text: var(--colour-text-brand);
+  --btn-colour-shadow: var(--colour-background-brand--darken);
+}
