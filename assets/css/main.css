@@ -8,6 +8,7 @@
 @import "objects/flex";
 @import "objects/link-inherit";
 @import "objects/media";
+@import "objects/svg-icon";
 @import "objects/text-container";
 
 @import "components/button";

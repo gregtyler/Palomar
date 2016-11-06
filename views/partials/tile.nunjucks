@@ -4,7 +4,7 @@
       {% if post.link %}
       <a class="o-link-inherit" href="{{post.link}}" target="_blank">
         {{post.title}}
-        []
+        {% icon 'external-link' %}
       </a>
       {% else %}
       <a class="o-link-inherit" href="{{post.url}}">{{post.title}}</a>
