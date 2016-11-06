@@ -16,8 +16,8 @@
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "postcss-import": "^8.1.2",
-    "postcss-nested": "^1.0.0"
+    "postcss-css-variables": "^0.6.0",
+    "postcss-import": "^8.1.2"
   },
   "dependencies": {
     "marked": "^0.3.6",

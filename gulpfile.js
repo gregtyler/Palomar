@@ -1,7 +1,7 @@
 /* eslint-env node */
 const gulp = require('gulp');
 const cssnano = require('cssnano');
-const nested = require('postcss-nested');
+const cssvariables = require('postcss-css-variables');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const atImport = require('postcss-import');
@@ -9,8 +9,8 @@ const atImport = require('postcss-import');
 // Build the CSS
 gulp.task('buildCSS', function() {
   const processors = [
-    nested(),
     atImport(),
+    cssvariables(),
     cssnano()
   ];
 
