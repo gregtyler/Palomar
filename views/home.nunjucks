@@ -6,7 +6,9 @@
     {% for post in posts %}
       <div class="c-tile c-tile--{{post.series}} o-flex__item">
         <header class="c-tile__header">
-          <h2 class="c-tile__title">{{post.title}}</h2>
+          <h2 class="c-tile__title">
+            <a class="c-tile__link" href="{% if post.link %}{{post.link}}{% else %}{{post.url}}{% endif %}" {% if post.link %}target="_blank"{% endif %}>{{post.title}}</a>
+          </h2>
         </header>
         <div class="c-tile__byline">
           {% if post.author.email === 'greg@gregtyler.co.uk' or post.author === null %}
@@ -16,6 +18,7 @@
           {% endif %}
         </div>
         <p class="c-tile__standfirst">{{post.excerpt}}</p>
+        <a href="{{post.url}}" class="c-tile__link">Read full article &raquo;</a>
       </div>
     {% endfor %}
   </div>
