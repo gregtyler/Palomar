@@ -18,6 +18,6 @@
       By {{post.author.name}} on {{post.published | date}}
     {% endif %}
   </div>
-  <p class="c-tile__standfirst">{{post.excerpt}}</p>
+  <p class="c-tile__standfirst">{{post.excerpt | safe}}</p>
   <a href="{{post.url}}">Read full article &raquo;</a>
 </div>
