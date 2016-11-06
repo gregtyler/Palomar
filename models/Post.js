@@ -13,7 +13,7 @@ module.exports.all = function all(criteria) {
       }
 
       // If we're looking for a particular slug, check the filename matches it
-      if (typeof criteria.id === 'string' && filepath.substr(9, filepath.length - 12) !== criteria.id) {
+      if (typeof criteria.id === 'string' && filepath.indexOf(criteria.id) === -1) {
         continue;
       }
 
@@ -38,6 +38,7 @@ module.exports.all = function all(criteria) {
 };
 
 module.exports.find = function find(criteria) {
-  const all = this.all(criteria);
-  return (all.length === '' ? null : all[0]);
+  return this.all(criteria).then(function(all) {
+    return (all.length === '' ? null : all[0]);
+  });
 };
