@@ -20,7 +20,8 @@ module.exports.all = function all(criteria) {
               fs.readFile(`${filepath}/${indexFilename}`, function(err, contents) {
                 if (err) return resolve(null); // File doesn't exist
                 const details = JSON.parse(contents);
-                resolve({label: details.label, url: `/${file}`});
+                details.url = `/${file}`;
+                resolve(details);
               });
             } else {
               resolve(null);
@@ -34,6 +35,11 @@ module.exports.all = function all(criteria) {
       });
     });
   }).then(function(series) {
+    // Filter series if requested
+    if (typeof criteria.showOnHomePage === 'boolean') {
+      series = series.filter(a => a.showOnHomePage === criteria.showOnHomePage);
+    }
+
     // Sort series if requested
     if (typeof criteria.order !== 'string') {
       criteria.order = 'label';
