@@ -1,4 +1,5 @@
 hr {
   border-top: none;
   border-bottom-color: var(--colour-border);
+  clear: both;
 }
