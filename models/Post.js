@@ -14,7 +14,7 @@ module.exports.all = function all(criteria) {
       }
 
       // If we're looking for a particular slug, check the filename matches it
-      if (typeof criteria.id === 'string' && filepath.indexOf(criteria.id) === -1) {
+      if (typeof criteria.id === 'string' && filepath.indexOf(criteria.id + '.md') === -1) {
         continue;
       }
 
