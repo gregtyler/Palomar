@@ -4,11 +4,18 @@
 <article class="c-post">
   <header class="c-post__header c-post__header--article">
     <h2 class="c-post__header-title">{{title}}</h2>
-    <p class="c-post__byline">
-      Posted&nbsp;by&nbsp;<strong>{{author.name}}</strong>
-      <wbr>
-      at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong>
-    </p>
+    {% if author or published %}
+      <p class="c-post__byline">
+        Posted
+        {% if author %}
+          &nbsp;by&nbsp;<strong>{{author.name}}</strong>
+          <wbr>
+        {% endif %}
+        {% if published %}
+          at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong>
+        {% endif %}
+      </p>
+    {% endif %}
 
     {% if series.showOnArticle %}
       <div class="c-series c-series--{{series.id}}">
