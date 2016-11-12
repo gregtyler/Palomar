@@ -11,7 +11,7 @@
     </p>
 
     {% if series.showOnArticle %}
-      <div class="c-post__series c-post__series--{{series.id}}">
+      <div class="c-series c-series--{{series.id}}">
         Part of the series <strong><a href="{{series.url}}">{{series.label}}</a></strong>
       </div>
     {% endif %}

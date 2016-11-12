@@ -19,18 +19,6 @@
   font-size: 0.9rem;
 }
 
-.c-post__series {
-  display: inline-block;
-  padding: calc(0.5 * var(--spacing-v)) var(--spacing-h);
-  border-left: 5px solid var(--colour-subbrand-default);
-  background-color: var(--colour-background-tile);
-}
-
-.c-post__series--webdev { border-left-color: var(--colour-subbrand-webdev); }
-.c-post__series--uoe { border-left-color: var(--colour-subbrand-uoe); }
-.c-post__series--christmas-2013 { border-left-color: var(--colour-subbrand-christmas); }
-.c-post__series--christmas-2014 { border-left-color: var(--colour-subbrand-christmas); }
-
 .c-post__body {
   padding: calc(1.5 * var(--spacing-v)) calc(1.5 * var(--spacing-h));
   font-size: 1.2rem;

@@ -12,6 +12,7 @@
 .c-tile--uoe { border-top-color: var(--colour-subbrand-uoe); }
 .c-tile--christmas-2013 { border-top-color: var(--colour-subbrand-christmas); }
 .c-tile--christmas-2014 { border-top-color: var(--colour-subbrand-christmas); }
+.c-tile--projects { border-top-color: var(--colour-subbrand-projects); }
 
 .c-tile__title {
   margin-top: 0;

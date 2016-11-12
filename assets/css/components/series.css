@@ -1,0 +1,12 @@
+.c-series {
+  display: inline-block;
+  padding: calc(0.5 * var(--spacing-v)) var(--spacing-h);
+  border-left: 5px solid var(--colour-subbrand-default);
+  background-color: var(--colour-background-tile);
+}
+
+.c-series--webdev { border-left-color: var(--colour-subbrand-webdev); }
+.c-series--uoe { border-left-color: var(--colour-subbrand-uoe); }
+.c-series--christmas-2013 { border-left-color: var(--colour-subbrand-christmas); }
+.c-series--christmas-2014 { border-left-color: var(--colour-subbrand-christmas); }
+.c-series--projects { border-left-color: var(--colour-subbrand-projects); }

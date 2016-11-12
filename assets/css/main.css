@@ -15,6 +15,7 @@
 @import "components/header";
 @import "components/tile";
 @import "components/post";
+@import "components/series";
 
 @import "utilities/clearfix";
 @import "utilities/text-align";
