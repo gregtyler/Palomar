@@ -1,9 +1,11 @@
 .c-tile {
+  display: flex;
   min-width: 250px;
   margin: var(--spacing-v) var(--spacing-h);
   padding: var(--spacing-v) var(--spacing-h);
   border-top: 5px solid var(--colour-subbrand-default);
   background-color: var(--colour-background-tile);
+  flex-direction: column;
 }
 
 .c-tile--webdev { border-top-color: var(--colour-subbrand-webdev); }
@@ -23,6 +25,7 @@
 }
 
 .c-tile__standfirst {
+  flex: 1;
   margin-top: var(--spacing-v);
   margin-bottom: var(--spacing-v);
 }
