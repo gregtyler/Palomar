@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {sortModels} = require('../lib/model.js');
+const {sortModels, rangeModels} = require('../lib/model.js');
 const path = require('path');
 
 const indexFilename = '_index.json';
@@ -49,6 +49,10 @@ module.exports.all = function all(criteria) {
     if (typeof criteria.order !== 'string') {
       criteria.order = 'label';
       sortModels(series, criteria.order);
+    }
+
+    if (typeof criteria.limit === 'number' || typeof criteria.offset === 'number') {
+      series = rangeModels(series, criteria.limit, criteria.offset);
     }
 
     // Return series

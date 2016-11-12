@@ -1,5 +1,5 @@
 const parsePostFile = require('../lib/parsePostFile');
-const {sortModels} = require('../lib/model.js');
+const {sortModels, rangeModels} = require('../lib/model.js');
 const walk = require('../lib/walk');
 
 module.exports.all = function all(criteria) {
@@ -26,6 +26,10 @@ module.exports.all = function all(criteria) {
       // Sort posts if requested
       if (typeof criteria.order === 'string') {
         sortModels(posts, criteria.order);
+      }
+
+      if (typeof criteria.limit === 'number' || typeof criteria.offset === 'number') {
+        posts = rangeModels(posts, criteria.limit, criteria.offset);
       }
 
       // Return posts
