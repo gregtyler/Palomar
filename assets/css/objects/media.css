@@ -16,6 +16,10 @@
   margin-left: var(--spacing-h);
 }
 
+.o-media--centre {
+  text-align: center;
+}
+
 .o-media__caption {
   padding: 0 calc(0.5 * var(--spacing-h));
   font-size: 0.85rem;
