@@ -11,7 +11,7 @@
   </header>
 
   <div class="c-post__body c-post__body--article o-overflow o-text-container u-clearfix">
-    {{body | safe}}
+    {{body | markdown}}
   </div>
 
   {% if link %}
