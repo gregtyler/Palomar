@@ -1,4 +1,5 @@
 const parsePostFile = require('../lib/parsePostFile');
+const {sortModels} = require('../lib/model.js');
 const walk = require('../lib/walk');
 
 module.exports.all = function all(criteria) {
@@ -24,11 +25,7 @@ module.exports.all = function all(criteria) {
     return Promise.all(proms).then(function(posts) {
       // Sort posts if requested
       if (typeof criteria.order === 'string') {
-        const orderRev = criteria.order.substr(-1) === '^' ? true : false;
-        const orderParam = criteria.order.replace(/\^+$/, '');
-        posts.sort(function(a, b) {
-          return (orderRev ? -1 : 1) * (a[orderParam] > b[orderParam] ? 1 : -1);
-        });
+        sortModels(posts, criteria.order);
       }
 
       // Return posts

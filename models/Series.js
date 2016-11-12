@@ -1,4 +1,5 @@
 const fs = require('fs');
+const {sortModels} = require('../lib/model.js');
 const path = require('path');
 
 const indexFilename = '_index.json';
@@ -47,13 +48,8 @@ module.exports.all = function all(criteria) {
     // Sort series if requested
     if (typeof criteria.order !== 'string') {
       criteria.order = 'label';
+      sortModels(series, criteria.order);
     }
-
-    const orderRev = criteria.order.substr(-1) === '^' ? true : false;
-    const orderParam = criteria.order.replace(/\^+$/, '');
-    series.sort(function(a, b) {
-      return (orderRev ? -1 : 1) * (a[orderParam] > b[orderParam] ? 1 : -1);
-    });
 
     // Return series
     return series;
