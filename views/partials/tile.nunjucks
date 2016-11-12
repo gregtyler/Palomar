@@ -18,6 +18,6 @@
       By {{post.author.name}} on {{post.published | date}}
     {% endif %}
   </div>
-  <div class="c-tile__standfirst">{{post.excerpt | markdown}}</div>
+  <div class="c-tile__standfirst">{{post.standfirst | markdown}}</div>
   <a href="{{post.url}}">Read full article &raquo;</a>
 </div>
