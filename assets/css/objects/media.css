@@ -20,6 +20,15 @@
   text-align: center;
 }
 
+.o-media--full {
+  width: 98vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -49vw;
+  margin-right: -49vw;
+}
+
 .o-media__caption {
   padding: 0 calc(0.5 * var(--spacing-h));
   font-size: 0.85rem;
