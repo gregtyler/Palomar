@@ -3,22 +3,23 @@
   --spacing-v: 1rem;
 
   /* Main colours */
-  --colour-background: #FFF;
+  --colour-background: #fff;
   --colour-text: #555;
-  --colour-background-brand: #C82E14;
-  --colour-background-brand--darken: #84200F;
-  --colour-text-brand: #FFF;
-  --colour-background-tile: #EEE;
+  --colour-background-brand: #c82e14;
+  --colour-background-brand--darken: #84200f;
+  --colour-text-brand: #fff;
+  --colour-background-tile: #eee;
   --colour-border: var(--colour-background-tile);
 
   /* Links */
-  --color-link: #3973B1;
-  --color-link-hover: #1F4369;
+  --color-link: #3973b1;
+  --color-link-hover: #1f4369;
 
   /* Subbrands */
-  --colour-subbrand-default: #DDD;
+  --colour-subbrand-default: #ddd;
   --colour-subbrand-webdev: #fbbf13;
   --colour-subbrand-uoe: #041e42;
+  --colour-subbrand-christmas: #f35135;
 
   --font-headers: "Titillium Web", arial, sans-serif;
   --font-body: "Open Sans", Merriweather, serif;
