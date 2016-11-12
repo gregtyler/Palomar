@@ -15,3 +15,9 @@
   float: right;
   margin-left: var(--spacing-h);
 }
+
+.o-media__caption {
+  padding: 0 calc(0.5 * var(--spacing-h));
+  font-size: 0.85rem;
+  text-align: center;
+}
