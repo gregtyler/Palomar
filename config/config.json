@@ -1,4 +1,6 @@
 {
   "siteTitle": "Greg Tyler",
-  "dateFormat": "Do MMMM YYYY"
+  "dateFormat": "Do MMMM YYYY",
+  "pichon": "https://github.com/gregtyler/gregtyler-pichon",
+  "articlesOnFrontPage": 6
 }
