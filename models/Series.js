@@ -24,6 +24,7 @@ module.exports.all = function all(criteria) {
                 if (err) return resolve(null); // File doesn't exist
                 const details = JSON.parse(contents);
                 details.url = `/${file}`;
+                details.id = file;
                 resolve(details);
               });
             } else {

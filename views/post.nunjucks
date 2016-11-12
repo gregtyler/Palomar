@@ -7,8 +7,16 @@
     <p class="c-post__byline">
       Posted&nbsp;by&nbsp;<strong>{{author.name}}</strong>
       <wbr>
-      at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong></p>
+      at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong>
+    </p>
+
+    {% if series.showOnArticle %}
+      <div class="c-post__series c-post__series--{{series.id}}">
+        Part of the series <strong><a href="{{series.url}}">{{series.label}}</a></strong>
+      </div>
+    {% endif %}
   </header>
+
 
   <div class="c-post__body c-post__body--article o-overflow o-text-container u-clearfix">
     {{body | markdown}}
