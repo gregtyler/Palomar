@@ -1,0 +1,21 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<article class="c-post">
+  <header class="c-post__header">
+    <h2 class="c-post__header-title">{{series.label}}</h2>
+  </header>
+
+  {% if series.description %}
+    <div class="c-post__body o-text-container">
+      {{series.description | markdown}}
+    </div>
+  {% endif %}
+
+  <div class="o-flex__container o-flex__container--stretch o-flex__container--wrap">
+    {% for post in posts %}
+      {% include "partials/tile.nunjucks" %}
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}

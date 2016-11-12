@@ -13,6 +13,9 @@ module.exports.all = function all(criteria) {
       for (let index = 0, l = files.length; index < l; index++) {
         const file = files[index];
         const filepath = path.resolve('data', file);
+
+        if (typeof criteria.series === 'string' && criteria.series !== file) continue;
+
         proms.push(new Promise(function(resolve, reject) {
           fs.stat(filepath, function(err, stat) {
             if (err) reject(err);
