@@ -8,11 +8,11 @@
       <p class="c-post__byline">
         Posted
         {% if author %}
-          &nbsp;by&nbsp;<strong>{{author.name}}</strong>
+          by <strong>{{author.name}}</strong>
           <wbr>
         {% endif %}
         {% if published %}
-          at&nbsp;<strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date | replace(' ', '&nbsp;') | safe}}</time></strong>
+          at <strong><time datetime="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}">{{published | date}}</time></strong>
         {% endif %}
       </p>
     {% endif %}
