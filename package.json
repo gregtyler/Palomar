@@ -20,6 +20,7 @@
     "postcss-import": "^8.1.2"
   },
   "dependencies": {
+    "highlight.js": "^9.8.0",
     "marked": "^0.3.6",
     "md5": "^2.2.1",
     "nunjucks": "^2.5.2",
