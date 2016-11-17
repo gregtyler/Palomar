@@ -3,6 +3,7 @@ const {sortModels, rangeModels} = require('../lib/model.js');
 const walk = require('../lib/walk');
 
 module.exports.all = function all(criteria) {
+  criteria = Object.assign({}, criteria);
   const searchDir = typeof criteria.series === 'string' ? `data/${criteria.series}` : 'data';
   const proms = [];
 

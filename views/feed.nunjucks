@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{config.siteTitle}}</title>
+    <description>{{config.siteDescription}}</description>
+    <link>{{baseURL}}/</link>
+    <generator>Palomar</generator>
+    <language>en-gb</language>
+    <lastBuildDate>{{posts[0].published | date('ddd, DD MMM YYYY HH:mm:ss \\G\\M\\T')}}</lastBuildDate>
+    <atom:link href="{{baseURL}}/rss/" rel="self" type="application/rss+xml"/>
+    <ttl>60</ttl>
+
+    {% for post in posts %}
+    <item>
+      <title><![CDATA[{{post.title | safe}}]]></title>
+      <description><![CDATA[{{post.standfirst | markdown | trim}}]]></description>
+      <link>{{baseURL}}{{post.url}}</link>
+      <guid isPermaLink="false">{{baseURL}}{{post.url}}</guid>
+      <category><![CDATA[{{post.series.label}}]]></category>
+      <dc:creator><![CDATA[{{post.author.name}}]]></dc:creator>
+      <pubDate>{{post.published | date('ddd, DD MMM YYYY HH:mm:ss \\G\\M\\T')}}</pubDate>
+      <content:encoded><![CDATA[{{post.body | markdown | trim}}]]></content:encoded>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
