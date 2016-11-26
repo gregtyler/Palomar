@@ -1,0 +1,30 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<article class="c-post">
+  <header class="c-post__header">
+    <h2 class="c-post__header-title">Archive</h2>
+  </header>
+
+  <div class="c-post__body">
+    <table class="c-archive">
+      <tbody>
+        {% for post in posts %}
+          {% if year != post.published | date('Y') %}
+            {% set year = post.published | date('Y') %}
+            <tr>
+              <td colspan="2">
+                <h3 id="year-{{year}}">{{year}}</h3>
+              </td>
+            </tr>
+          {% endif %}
+          <tr>
+            <td>{{post.published | date('MMMM Do')}}</td>
+            <td><a href="{{post.url}}">{{post.title}}</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</article>
+{% endblock %}
