@@ -3,5 +3,6 @@
   "siteDescription": "Websites, quizzes, problem solving. I try to make stuff better.",
   "dateFormat": "Do MMMM YYYY",
   "pichon": "https://github.com/gregtyler/gregtyler-pichon",
-  "articlesOnFrontPage": 6
+  "articlesOnFrontPage": 6,
+  "twitterHandle": "gregtyler"
 }
