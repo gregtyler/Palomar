@@ -12,12 +12,17 @@
 {% if config.twitterHandle %}<meta name="twitter:creator" content="@gregtyler">{% endif %}
 <meta property="og:title" content="{{title}}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="{{url}}" />
-<meta property="og:image" content="{{url}}" />
+<meta property="og:url" content="{{baseURL}}{{url}}" />
 <meta property="og:description" content="{{standfirst}}" />
 <meta property="og:site_name" content="{{config.siteTitle}}" />
 <meta property="article:published_time" content="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}" />
 <meta property="article:modified_time" content="{{published | date('YYYY-MM-DDTHH:mm:ss\\Z')}}" />
+
+{% if image %}
+<meta itemprop="image" content="{{baseURL}}{{image}}">
+<meta name="twitter:image:src" content="{{baseURL}}{{image}}">
+<meta property="og:image" content="{{baseURL}}{{image}}" />
+{% endif %}
 {% endblock %}
 
 {% block content %}
