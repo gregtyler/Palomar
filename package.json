@@ -15,7 +15,9 @@
     "eslint": "^3.7.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
+    "gulp-sftp": "^0.1.5",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-ssh": "^0.6.0",
     "postcss-css-variables": "^0.6.0",
     "postcss-import": "^8.1.2"
   },
