@@ -1,6 +1,6 @@
 {% extends "layout.nunjucks" %}
 
-{% block htmlTag %}itemscope itemtype="http://schema.org/Article"{% endblock %}
+{% block htmlTag %} itemscope itemtype="http://schema.org/Article"{% endblock %}
 
 {% block header %}
 <meta itemprop="name" content="{{title}}">
