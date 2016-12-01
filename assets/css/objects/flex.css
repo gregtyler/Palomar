@@ -15,6 +15,12 @@
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 800px) {
+  .o-flex__container--mini {
+    display: block;
+  }
+}
+
 .o-flex__item {
   flex: 1;
 }

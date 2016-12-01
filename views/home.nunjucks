@@ -1,14 +1,14 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-<div class="o-flex__container o-flex__container--align-top">
+<div class="o-flex__container o-flex__container--align-top o-flex__container--mini">
   <div class="o-flex__item o-flex__container o-flex__container--stretch o-flex__container--wrap">
     {% for post in posts %}
       {% include "partials/tile.nunjucks" %}
     {% endfor %}
   </div>
 
-  <div class="c-tile" style="width:20%;">
+  <div class="c-tile o-series-preview">
     <header class="c-tile__header">
       <h3 class="c-tile__title">Series</h3>
     </header>
