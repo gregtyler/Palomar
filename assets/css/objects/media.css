@@ -2,18 +2,20 @@
   max-width: 100%;
 }
 
-.o-media--left, .o-media--right {
-  max-width: 40%;
-}
+@media screen and (min-width: 800px) {
+  .o-media--left, .o-media--right {
+    max-width: 40%;
+  }
 
-.o-media--left {
-  float: left;
-  margin-right: var(--spacing-h);
-}
+  .o-media--left {
+    float: left;
+    margin-right: var(--spacing-h);
+  }
 
-.o-media--right {
-  float: right;
-  margin-left: var(--spacing-h);
+  .o-media--right {
+    float: right;
+    margin-left: var(--spacing-h);
+  }
 }
 
 .o-media--centre {
