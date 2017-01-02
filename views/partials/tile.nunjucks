@@ -2,7 +2,7 @@
   <header class="c-tile__header">
     <h2 class="c-tile__title">
       {% if post.link %}
-      <a class="o-link-inherit" href="{{post.link}}" target="_blank">
+      <a class="o-link-inherit" href="{{post.link}}">
         {{post.title}}
         {% icon 'external-link' %}
       </a>
