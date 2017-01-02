@@ -29,6 +29,13 @@ module.exports.all = function all(criteria) {
         sortModels(posts, criteria.order);
       }
 
+      // Remove ones supposed to be hidden from the homepage
+      if (criteria.homepage) {
+        posts = posts.filter(function(post) {
+          return post.series !== 'christmas-2016';
+        });
+      }
+
       if (typeof criteria.limit === 'number' || typeof criteria.offset === 'number') {
         posts = rangeModels(posts, criteria.limit, criteria.offset);
       }
