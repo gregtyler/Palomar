@@ -1,0 +1,7 @@
+.o-text--centre {
+  text-align: center;
+}
+
+.o-text--padded {
+  padding: var(--spacing-h) var(--spacing-v);
+}

@@ -2,19 +2,24 @@
 
 {% block content %}
 <div class="o-flex__container o-flex__container--align-top o-flex__container--mini">
-  <div class="o-flex__item o-flex__container o-flex__container--stretch o-flex__container--wrap">
-    {% for post in posts %}
-      {% include "partials/tile.nunjucks" %}
-    {% endfor %}
+  <div class="o-flex__item">
+    <div class="o-flex__container o-flex__container--stretch o-flex__container--wrap">
+      {% for post in posts %}
+        {% include "partials/tile.nunjucks" %}
+      {% endfor %}
+    </div>
+    <div class="o-text--centre o-text--padded">
+      <a class="c-btn c-btn--primary" href="/archive">Full post archive</a>
+    </div>
   </div>
 
   <div class="c-tile o-series-preview">
     <header class="c-tile__header">
       <h3 class="c-tile__title">Series</h3>
     </header>
-      {% for oneSeries in series %}
-        <div><a href="{{oneSeries.url}}"><span class="c-series c-series--{{oneSeries.id}}">{{oneSeries.label}}</span></a></div>
-      {% endfor %}
+    {% for oneSeries in series %}
+      <div><a href="{{oneSeries.url}}"><span class="c-series c-series--{{oneSeries.id}}">{{oneSeries.label}}</span></a></div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

@@ -11,6 +11,7 @@
 @import "objects/media";
 @import "objects/series-preview";
 @import "objects/svg-icon";
+@import "objects/text";
 @import "objects/text-container";
 
 @import "components/button";

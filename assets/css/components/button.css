@@ -1,7 +1,7 @@
 .c-btn {
   display: inline-block;
   padding: calc(0.5 * var(--spacing-h)) var(--spacing-v);
-  border: 1px solid var(--btn-colour-shadow);
+  border: 1px solid var(--btn-colour-shadow, transparent);
   border-radius: 3px;
   background-color: var(--btn-colour-background);
   color: var(--btn-colour-text);
