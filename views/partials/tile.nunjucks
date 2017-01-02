@@ -19,5 +19,5 @@
     {% endif %}
   </div>
   <div class="c-tile__standfirst">{{post.standfirst | markdown}}</div>
-  <a href="{{post.url}}">Read full article &raquo;</a>
+  <a href="{% if post.link %}{{post.link}}{% else %}{{post.url}}{% endif %}">Read {% if post.publisher %}on {{post.publisher}} {% icon 'external-link' %}{% else %}full article »{% endif %}</a>
 </div>

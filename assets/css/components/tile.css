@@ -31,3 +31,7 @@
   margin-top: var(--spacing-v);
   margin-bottom: var(--spacing-v);
 }
+
+.c-tile__publisher {
+  margin-bottom: var(--spacing-v);
+}
