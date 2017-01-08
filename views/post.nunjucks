@@ -57,7 +57,7 @@
 
   {% if link %}
   <div class="u-text-centre">
-    <a href="{{link}}" class="c-btn c-btn--primary" target="_blank">Read full article</a>
+    <a href="{{link}}" class="c-btn c-btn--primary" target="_blank" rel="noopener">Read full article</a>
   </div>
   {% endif %}
 </article>

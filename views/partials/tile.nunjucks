@@ -2,7 +2,7 @@
   <header class="c-tile__header">
     <h2 class="c-tile__title">
       {% if post.link %}
-      <a class="o-link-inherit" href="{{post.link}}">
+      <a class="o-link-inherit" href="{{post.link}}" rel="noopener">
         {{post.title}}
         {% icon 'external-link' %}
       </a>
@@ -19,5 +19,5 @@
     {% endif %}
   </div>
   <div class="c-tile__standfirst">{{post.standfirst | markdown}}</div>
-  <a href="{% if post.link %}{{post.link}}{% else %}{{post.url}}{% endif %}">Read {% if post.publisher %}on {{post.publisher}} {% icon 'external-link' %}{% else %}full article »{% endif %}</a>
+  <a href="{% if post.link %}{{post.link}}{% else %}{{post.url}}{% endif %}" rel="noopener">Read {% if post.publisher %}on {{post.publisher}} {% icon 'external-link' %}{% else %}full article »{% endif %}</a>
 </div>
