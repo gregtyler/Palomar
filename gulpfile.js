@@ -7,6 +7,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const atImport = require('postcss-import');
 const sftp = require('gulp-sftp');
+const uglify = require('gulp-uglify');
 const GulpSSH = require('gulp-ssh');
 const config = require('./secret.json');
 
@@ -45,7 +46,15 @@ function buildCSS(options) {
   return chain.pipe(gulp.dest('public'));
 }
 
-gulp.task('deployFiles', ['buildCSSProd'], function() {
+gulp.task('buildJS', function() {
+  return gulp.src('assets/js/sw.js')
+    .pipe(sourcemaps.init())
+      .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('public'));
+});
+
+gulp.task('deployFiles', ['buildCSSProd', 'buildJS'], function() {
   return gulp.src(['config/*.json', 'lib/**/*.js', 'models/**/*.js', 'public/**/*.*', 'views/**/*.nunjucks', 'server.js', 'package.json'], {base: '.'})
     .pipe(sftp({
         host: config.host,
@@ -67,10 +76,11 @@ gulp.task('buildCSSProd', buildCSS.bind(process, {sourcemaps: false}));
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch('assets/css/**/*.css', ['buildCSSDev']);
+  gulp.watch('assets/js/**/*.js', ['buildJS']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'buildCSSDev']);
+gulp.task('default', ['watch', 'buildCSSDev', 'buildJS']);
 
 // Deployment
 gulp.task('deploy', ['restartPM2']);
