@@ -2,7 +2,7 @@
 <html lang="en"{% block htmlTag %}{% endblock %}>
 <head>
   <meta charset="UTF-8">
-  <title>{% block title %}{{config.siteTitle}}{% endblock %}</title>
+  <title>{% block title %}{% endblock %}{{config.siteTitle}}</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/main.css?20170102">
   <link rel="shortcut icon" href="/favicon.png">

@@ -62,6 +62,4 @@
 </article>
 {% endblock %}
 
-{% block title %}
-  {{title}}
-{% endblock %}
+{% block title %}{{title}} - {% endblock %}
