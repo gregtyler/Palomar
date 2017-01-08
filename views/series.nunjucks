@@ -1,5 +1,9 @@
 {% extends "layout.nunjucks" %}
 
+{% block header %}
+<link rel="canonical" href="/{{series.id}}">
+{% endblock %}
+
 {% block content %}
 <article class="c-post">
   <header class="c-post__header">
