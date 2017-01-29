@@ -5,10 +5,10 @@
   <title>{% block title %}{% endblock %}{{config.siteTitle}}</title>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="/main.css?20170102">
-  <link rel="prefetch" type="text/css" href="/main.css?20170102" as="style">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" href="/favicon.png">
   {% block header %}
   {% endblock %}

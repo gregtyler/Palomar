@@ -1,11 +1,10 @@
-/* globals self, caches, fetch */
 /* eslint-disable */
 const CACHE_NAME = 'gregtyler-cache';
 const urlsToCache = [
   '/',
   '/offline'
 ];
-
+/*
 self.addEventListener('install', function(event) {
   // Perform install steps
   event.waitUntil(
@@ -61,3 +60,4 @@ self.addEventListener('fetch', function(event) {
       })
     );
 });
+*/

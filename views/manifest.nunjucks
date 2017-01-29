@@ -1,0 +1,15 @@
+{
+  "short_name": "{{config.siteTitle}}",
+  "name": "{{config.siteTitle}}",
+  "theme_color": "#c82e14",
+  "background_color": "#FFF",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}
