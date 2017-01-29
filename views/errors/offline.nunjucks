@@ -1,0 +1,13 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<article class="c-post">
+  <header class="c-post__header">
+    <h2 class="c-post__header-title">Offline</h2>
+  </header>
+
+  <div class="c-post__body">
+    This page is not available as you are not connected to the internet.
+  </div>
+</article>
+{% endblock %}
