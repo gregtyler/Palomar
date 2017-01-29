@@ -61,6 +61,13 @@
   </div>
   {% endif %}
 </article>
+
+{% if comments !== 'Off' %}
+  <div class="c-feedback-request">
+    Any questions? Comments? Other feedback? Contact me <a href="https://twitter.com/gregtyler">on Twitter</a>.
+  </div>
+{% endif %}
+
 {% endblock %}
 
 {% block title %}{{title}} - {% endblock %}

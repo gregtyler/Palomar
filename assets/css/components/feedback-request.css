@@ -1,0 +1,6 @@
+.c-feedback-request {
+  background-color: #DDD;
+  padding: var(--spacing-v) var(--spacing-h);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-v);
+}

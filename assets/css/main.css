@@ -15,6 +15,7 @@
 @import "objects/text-container";
 
 @import "components/button";
+@import "components/feedback-request";
 @import "components/header";
 @import "components/highlight";
 @import "components/tile";
