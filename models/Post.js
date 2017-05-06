@@ -29,6 +29,11 @@ module.exports.all = function all(criteria) {
         sortModels(posts, criteria.order);
       }
 
+      // Remove future posts
+      posts = posts.filter(function(post) {
+        return post.published <= new Date();
+      });
+
       // Remove ones supposed to be hidden from the homepage
       if (criteria.homepage) {
         posts = posts.filter(function(post) {
