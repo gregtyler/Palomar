@@ -66,7 +66,7 @@ gulp.task('deployFiles', ['buildCSSProd', 'buildJS'], function() {
 
 gulp.task('restartPM2', ['deployFiles'], function() {
   return gulpSSH
-    .exec(['pm2 restart server']);
+    .exec(['pm2 restart palomar']);
 });
 
 // Build the CSS
