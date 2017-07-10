@@ -5,6 +5,7 @@
 {% block header %}
 <meta itemprop="name" content="{{title}}">
 <meta itemprop="description" content="{{standfirst}}">
+<meta name="description" content="{{standfirst}}">
 <link rel="canonical" href="/{{series.id}}/{{slug}}">
 <meta name="twitter:card" content="summary">
 {% if config.twitterHandle %}<meta name="twitter:site" content="@gregtyler">{% endif %}

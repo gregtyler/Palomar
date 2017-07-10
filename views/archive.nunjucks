@@ -1,5 +1,9 @@
 {% extends "layout.nunjucks" %}
 
+{% block header %}
+<meta name="description" content="Archive of posts on this site">
+{% endblock %}
+
 {% block content %}
 <article class="c-post">
   <header class="c-post__header">

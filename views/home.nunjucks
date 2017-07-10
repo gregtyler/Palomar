@@ -1,5 +1,9 @@
 {% extends "layout.nunjucks" %}
 
+{% block header %}
+<meta name="description" content="{{config.siteDescription}}">
+{% endblock %}
+
 {% block content %}
 <div class="o-flex__container o-flex__container--align-top o-flex__container--mini">
   <div class="o-flex__item">

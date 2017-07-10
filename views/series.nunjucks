@@ -2,6 +2,7 @@
 
 {% block header %}
 <link rel="canonical" href="/{{series.id}}">
+<meta name="description" content="Posts about {{series.label}}">
 {% endblock %}
 
 {% block content %}
