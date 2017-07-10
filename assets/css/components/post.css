@@ -25,6 +25,6 @@
 }
 
 .c-post__body--article {
-  max-width: 800px;
+  max-width: 35em;
   margin: 0 auto;
 }
