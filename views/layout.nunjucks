@@ -18,8 +18,8 @@
     <h1 class="c-header__title o-flex__item">
       <a href="/" class="c-header__link o-link-inherit">{{config.siteTitle}}</a>
     </h1>
-    <a href="https://twitter.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">Twitter</a>
-    <a href="https://github.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">GitHub</a>
+    <a rel="me" href="https://twitter.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">Twitter</a>
+    <a rel="me" href="https://github.com/gregtyler" class="c-header__link c-header__link--external o-link-inherit" target="_blank">GitHub</a>
   </header>
   <main>
     {% block content %}{% endblock %}
