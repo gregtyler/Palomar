@@ -55,6 +55,8 @@ gulp.task('buildJS', function() {
 });
 
 gulp.task('deployFiles', ['buildCSSProd', 'buildJS'], function() {
+  if (!config.remotePath) throw new Error('Remote path not set in secret.json');
+
   return gulp.src(['config/*.json', 'lib/**/*.js', 'models/**/*.js', 'public/**/*.*', 'views/**/*.nunjucks', 'server.js', 'package.json'], {base: '.'})
     .pipe(sftp({
         host: config.host,
