@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "concurrently \"nodemon -e js,json,css,nunjucks\" \"gulp\""
+    "dev": "concurrently \"nodemon -e js,json,css,nunjucks\" \"gulp\"",
+    "deploy": "gulp deploy"
   },
   "keywords": [],
   "author": "",
