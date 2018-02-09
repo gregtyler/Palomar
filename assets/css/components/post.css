@@ -16,7 +16,6 @@
 
 .c-post__byline {
   margin-top: var(--spacing-v);
-  font-size: 0.9rem;
 }
 
 .c-post__body {
@@ -25,6 +24,6 @@
 }
 
 .c-post__body--article {
-  max-width: 35em;
+  max-width: 38em;
   margin: 0 auto;
 }
