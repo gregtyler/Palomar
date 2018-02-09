@@ -31,8 +31,14 @@ module.exports.all = function all(criteria) {
 
       // Remove future posts
       posts = posts.filter(function(post) {
-        return post.published <= new Date();
+        return post.published <= new Date() || typeof post.published === 'undefined';
       });
+
+      if (!criteria.single) {
+        posts = posts.filter(function(post) {
+          return typeof post.published !== 'undefined';
+        });
+      }
 
       // Remove ones supposed to be hidden from the homepage
       if (criteria.homepage) {
@@ -52,6 +58,7 @@ module.exports.all = function all(criteria) {
 };
 
 module.exports.find = function find(criteria) {
+  criteria.single = true;
   return this.all(criteria).then(function(all) {
     return (all.length === '' ? null : all[0]);
   });
