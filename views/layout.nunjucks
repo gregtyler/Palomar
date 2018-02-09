@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#c82e14">
   <link rel="stylesheet" type="text/css" href="/main.css?20170102">
   <link rel="preconnect" href="https://analytics.gregtyler.co.uk">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
   {% block header %}
