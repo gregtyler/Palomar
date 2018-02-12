@@ -3,7 +3,6 @@
 @import "elements/body";
 @import "elements/hr";
 
-@import "settings/fonts";
 @import "settings/variables";
 
 @import "objects/flex";
