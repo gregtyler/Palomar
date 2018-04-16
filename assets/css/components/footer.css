@@ -1,0 +1,8 @@
+.c-footer {
+  padding: calc(var(--spacing-v) * 2) var(--spacing-h) var(--spacing-v);
+  text-align: right;
+}
+
+.c-footer__link {
+  color: inherit;
+}

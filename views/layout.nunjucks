@@ -23,6 +23,9 @@
   </header>
   <main>
     {% block content %}{% endblock %}
+    <footer class="c-footer">
+      <a href="/privacy" class="c-footer__link">Privacy notice</a>
+    </footer>
   </main>
   <script type="text/javascript">
     // Analytics
